@@ -1,36 +1,36 @@
 .section .data
-base:
-		.int 0
-height:
-		.int 0
-.global base
-.global height
+.global num
 	
 .section .text
 
-	.global getArea
+	.global steps
 	
-getArea:
+steps:
 	
 	# prologue
 	pushl %ebp 
 	movl %esp, %ebp
+	pushl %ebx
 
-	movl base, %eax
-	mull height
+	movl num, %ecx
+	movl num, %eax
+	cdq
+	movl $3, %ebx
+	mull %ebx # Multiplies by 3
 
-	cmp $0, %eax
-	je se_for_zero
+	addl $6, %eax # Adds 6
 
-	movl $2, %ecx
-	divl %ecx
-	jmp fim
-	
-se_for_zero:
-	movl $0 , %eax
+	cdq
+	divl %ebx # Divides by 3
 
-fim:
+	addl $12, %eax #  Adds 12
+
+	subl %ecx, %eax	# Subtracts num
+
+	subl $1, %eax # Subtracts 1
+
 	#epilogue
+	popl %ebx
 	movl %ebp, %esp
 	popl %ebp
 	ret

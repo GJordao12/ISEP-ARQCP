@@ -1,17 +1,15 @@
 #include <stdio.h>
 #include "asm.h"
 
+int num;
 int main()
 {
-    printf("Insira a base: ");
-    scanf("%d", &base);
+    printf("Insira o numero: ");
+    scanf("%d", &num);
 
-    printf("Insira a altura: ");
-    scanf("%d", &height);
+    int res = steps();
 
-    int area = getArea();
-
-    printf("A área do trinângulo é: %d\n",area);
+    printf("O resultado é: %d\n",res);
     
     return 0;
 }

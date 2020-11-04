@@ -1,6 +1,4 @@
 #ifndef ASM_H
 #define ASM_H
-int steps();
+int sum_v2();
 #endif
-
-
