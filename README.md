@@ -1,4 +1,4 @@
-# ISEP - ARQCP (2º ANO - 1º SEMESTRE)
-* Linguagem: C e Assembly
-* Projetos e Trabalhos de ARQCP da Universidade
-* Ano: 2020
+# ISEP - ARQCP (2º YEAR - 1º SEMESTER)
+* Language: C and Assembly
+* University ARQCP Projects and Works
+* Year: 2020
